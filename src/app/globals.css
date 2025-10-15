@@ -18,6 +18,13 @@
 
   --background-grid-size: 28px;
   --background-grid-line: oklch(0% 0 0 / 0.06);
+
+  --breakpoint-sm: 390px;
+  --breakpoint-md: 744px;
+  --breakpoint-lg: 1120px;
+  --breakpoint-xl: 1440px;
+
+  --container-max: 1120px;
 }
 
 @theme inline {
@@ -44,6 +51,32 @@
   --font-heading: var(--font-public-sans);
   --font-weight-base: 400;
   --font-weight-heading: 700;
+}
+
+@utility container-app {
+  width: 100%;
+  margin-inline: auto;
+  max-width: var(--container-max);
+
+  /* padding for phone */
+  padding-inline: 16px;
+  padding-block: 0;
+}
+
+@media (width >= 744px) {
+  .container-app {
+    padding-inline: 16px;
+    padding-top: 32px;
+    padding-bottom: 0;
+  }
+}
+
+@media (width >= 1120px) {
+  .container-app {
+    padding-inline: 0;
+    padding-top: 36px;
+    padding-bottom: 0;
+  }
 }
   
 @layer base {

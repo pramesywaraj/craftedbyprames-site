@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${publicSans.variable} antialiased`}
+        className={`${publicSans.variable} antialiased mx-auto w-full max-w-[1120px]`}
       >
         {children}
       </body>
