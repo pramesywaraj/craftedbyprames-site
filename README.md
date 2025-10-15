@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧱 craftedByPrames
 
-## Getting Started
+A personal portfolio website built to showcase my work, projects, and design philosophy — all crafted with empathy, creativity, and clean code.
 
-First, run the development server:
+This site reflects how I approach building digital experiences: thoughtful design, modular architecture, and attention to detail. It’s built with a neubrutalism-inspired aesthetic to balance playfulness and clarity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Minimal yet expressive design inspired by **Neubrutalism**
+- Fully **responsive** layout optimized for desktop and mobile
+- Built with **modern frontend technologies**
+- Fast load time, clean typography, and accessibility in mind
+- Sections for About, Work Experience, Projects, and Contact
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** Next.js  
+- **Styling:** Tailwind CSS  
+- **Font:** Public Sans  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📜 License
 
-## Deploy on Vercel
+This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.  
+You are free to view and learn from this code, but commercial use or redistribution without permission is not allowed.  
+See the [LICENSE](./LICENSE) file for details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👋 Contact
+
+If you’d like to connect or collaborate:
+
+- 🌐 [craftedbyprames.com](https://craftedbyprames.com)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/pramesywara-j/)  
+- 🐙 [GitHub](https://github.com/pramesywaraj)  
+- ✉️ [Email](mailto:jembarpanalar21@gmail.com)
+
+---
+
+### 🧩 Credits
+
+Designed and developed by **Pramesywara Jembar**  
+© 2025 Crafted by Prames — All rights reserved.
