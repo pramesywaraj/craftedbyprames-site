@@ -11,6 +11,7 @@
   --ring: oklch(0.1776 0 0);
   --overlay: oklch(0% 0 0 / 0.8);
   --shadow: 12px 12px 0px 0px var(--border);
+  --shadow-button: 4px 4px 0px 0px var(--border);
 
   --brand-1: oklch(0.5973 0.2237 279.77);
   --brand-2: oklch(0.7095 0.1881 11.01);
@@ -44,8 +45,15 @@
   --spacing-boxShadowY: 12px;
   --spacing-reverseBoxShadowX: -12px;
   --spacing-reverseBoxShadowY: -12px;
+
+  --spacing-button-boxShadowX: 2px;
+  --spacing-button-boxShadowY: 2px;
+  --spacing-button-reverseBoxShadowX: -2px;
+  --spacing-button-reverseBoxShadowY: -2px;
+
   --radius-base: 10px;
   --shadow-shadow: var(--shadow);
+  --shadow-shadow-button: var(--shadow-button);
 
   --font-base: var(--font-public-sans);
   --font-heading: var(--font-public-sans);
