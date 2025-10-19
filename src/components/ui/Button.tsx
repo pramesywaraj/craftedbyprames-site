@@ -20,7 +20,7 @@ const buttonVariants = cva(
         default: "px-4 py-3",
         sm: "h-9 px-3",
         lg: "h-11 px-8",
-        icon: "size-10",
+        icon: "p-2",
       },
     },
     defaultVariants: {
@@ -51,4 +51,25 @@ function Button({
   )
 }
 
-export { Button, buttonVariants }
+function LinkButton({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}: React.ComponentProps<"a"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean
+  }) {
+  const Comp = asChild ? Slot : "a"
+
+  return (
+    <Comp
+      data-slot="a"
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
+  )
+}
+
+export { Button, LinkButton, buttonVariants }
