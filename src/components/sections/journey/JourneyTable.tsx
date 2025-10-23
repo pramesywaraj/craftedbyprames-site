@@ -21,8 +21,8 @@ function JourneyTable() {
     };
 
     return (
-      <Card className="p-0">
-        <ResizablePanelGroup direction="horizontal" className="max-h-[50vh]">
+      <Card className="p-0 min-h-[70vh]">
+        <ResizablePanelGroup direction="horizontal" className="max-h-[70vh]">
           <ResizablePanel
             className="flex flex-col"
             minSize={30}

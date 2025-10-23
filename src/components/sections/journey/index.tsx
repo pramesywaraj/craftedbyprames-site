@@ -5,7 +5,7 @@ import {
 } from "@/components/ui/SectionComp";
 import JourneyTable from "./JourneyTable";
 
-export default function JourneySection() {
+function JourneySection() {
   return (
     <Section id="journey" ariaLabelledBy="journey-title">
       <SectionContainer>
@@ -15,3 +15,5 @@ export default function JourneySection() {
     </Section>
   );
 }
+
+export default JourneySection;
