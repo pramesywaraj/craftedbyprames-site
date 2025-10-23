@@ -14,7 +14,7 @@ export default function ToolsSection({}: React.ComponentProps<"div">) {
             {tools.map((tool) => (
               <div
                 key={tool.name}
-                className="flex gap-2 items-center flex-grow-0 flex-shrink w-[calc(25%-0.75rem)] md:w-[calc(20%-0.8rem)] lg:w-[calc(16.666%-0.83rem)] animate-fade-in-up motion-reduce:animate-none"
+                className="flex gap-2 items-center justify-center flex-grow-0 flex-shrink w-[calc(25%-0.75rem)] md:w-[calc(20%-0.8rem)] lg:w-[calc(16.666%-0.83rem)] animate-fade-in-up motion-reduce:animate-none"
                 style={{ animationDelay: `${tool.appear_time}ms` }}
               >
                 <Image
