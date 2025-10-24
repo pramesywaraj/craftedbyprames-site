@@ -40,9 +40,15 @@ export default function Navbar() {
         e.preventDefault();
         const element = document.querySelector(id);
         if (element) {
-            element.scrollIntoView({
+            const navbar = document.querySelector("header");
+            const navbarHeight = navbar ? navbar.offsetHeight + 16 : 100;
+
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
                 behavior: "smooth",
-                block: "start",
             });
         }
     };
