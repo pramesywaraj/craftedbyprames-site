@@ -2,9 +2,9 @@ export interface Tool {
     icon: string; // SVG filename or path
     name: string;
     appear_time: number; // delay in ms
-  }
-  
-  export const tools: Tool[] = [
+}
+
+export const tools: Tool[] = [
     { icon: "/icons/javascript.svg", name: "Javascript", appear_time: 0 },
     { icon: "/icons/typescript.svg", name: "Typescript", appear_time: 100 },
     { icon: "/icons/sql.svg", name: "SQL", appear_time: 200 },
@@ -22,4 +22,4 @@ export interface Tool {
     { icon: "/icons/webpack.svg", name: "Webpack", appear_time: 1400 },
     { icon: "/icons/jest.svg", name: "Jest", appear_time: 1500 },
     { icon: "/icons/vitest.svg", name: "Vitest", appear_time: 1600 },
-  ];
+];

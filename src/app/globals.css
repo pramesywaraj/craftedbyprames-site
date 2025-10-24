@@ -2,282 +2,363 @@
 @import "tw-animate-css";
 
 :root {
-  --background: oklch(0.9741 0.0074 80.72);
-  --secondary-background: oklch(100% 0 0);
-  --foreground: oklch(0.1776 0 0);
-  --main-foreground: oklch(0.1776 0 0);
-  --main: oklch(0.8925 0.1667 94.55);
-  --border: oklch(0.1776 0 0);
-  --ring: oklch(0.1776 0 0);
-  --overlay: oklch(0% 0 0 / 0.8);
-  --shadow: 12px 12px 0px 0px var(--border);
-  --shadow-button: 4px 4px 0px 0px var(--border);
+    --background: oklch(0.9741 0.0074 80.72);
+    --secondary-background: oklch(100% 0 0);
+    --foreground: oklch(0.1776 0 0);
+    --main-foreground: oklch(0.1776 0 0);
+    --main: oklch(0.8925 0.1667 94.55);
+    --border: oklch(0.1776 0 0);
+    --ring: oklch(0.1776 0 0);
+    --overlay: oklch(0% 0 0 / 0.8);
+    --shadow: 12px 12px 0px 0px var(--border);
+    --shadow-button: 4px 4px 0px 0px var(--border);
 
-  --brand-1: oklch(0.5973 0.2237 279.77);
-  --brand-2: oklch(0.7095 0.1881 11.01);
-  --brand-3: oklch(0.8318 0.2324 132.41);
+    --brand-1: oklch(0.5973 0.2237 279.77);
+    --brand-2: oklch(0.7095 0.1881 11.01);
+    --brand-3: oklch(0.8318 0.2324 132.41);
 
-  --background-grid-size: 28px;
-  --background-grid-line: oklch(0% 0 0 / 0.06);
+    --background-grid-size: 28px;
+    --background-grid-line: oklch(0% 0 0 / 0.06);
 
-  --breakpoint-sm: 390px;
-  --breakpoint-md: 744px;
-  --breakpoint-lg: 1120px;
-  --breakpoint-xl: 1440px;
+    --breakpoint-sm: 390px;
+    --breakpoint-md: 744px;
+    --breakpoint-lg: 1120px;
+    --breakpoint-xl: 1440px;
 
-  --container-max: 1120px;
+    --container-max: 1120px;
 }
 
 @theme inline {
-  --color-main: var(--main);
-  --color-background: var(--background);
-  --color-secondary-background: var(--secondary-background);
-  --color-foreground: var(--foreground);
-  --color-main-foreground: var(--main-foreground);
-  --color-border: var(--border);
-  --color-overlay: var(--overlay);
-  --color-ring: var(--ring);
-  --color-brand-1: var(--brand-1);
-  --color-brand-2: var(--brand-2);
-  --color-brand-3: var(--brand-3);
+    --color-main: var(--main);
+    --color-background: var(--background);
+    --color-secondary-background: var(--secondary-background);
+    --color-foreground: var(--foreground);
+    --color-main-foreground: var(--main-foreground);
+    --color-border: var(--border);
+    --color-overlay: var(--overlay);
+    --color-ring: var(--ring);
+    --color-brand-1: var(--brand-1);
+    --color-brand-2: var(--brand-2);
+    --color-brand-3: var(--brand-3);
 
-  --spacing-boxShadowX: 12px;
-  --spacing-boxShadowY: 12px;
-  --spacing-reverseBoxShadowX: -12px;
-  --spacing-reverseBoxShadowY: -12px;
+    --spacing-boxShadowX: 12px;
+    --spacing-boxShadowY: 12px;
+    --spacing-reverseBoxShadowX: -12px;
+    --spacing-reverseBoxShadowY: -12px;
 
-  --spacing-button-boxShadowX: 2px;
-  --spacing-button-boxShadowY: 2px;
-  --spacing-button-reverseBoxShadowX: -2px;
-  --spacing-button-reverseBoxShadowY: -2px;
+    --spacing-button-boxShadowX: 2px;
+    --spacing-button-boxShadowY: 2px;
+    --spacing-button-reverseBoxShadowX: -2px;
+    --spacing-button-reverseBoxShadowY: -2px;
 
-  --radius-base: 10px;
-  --shadow-shadow: var(--shadow);
-  --shadow-shadow-button: var(--shadow-button);
+    --radius-base: 10px;
+    --shadow-shadow: var(--shadow);
+    --shadow-shadow-button: var(--shadow-button);
 
-  --font-base: var(--font-public-sans);
-  --font-heading: var(--font-public-sans);
-  --font-weight-base: 400;
-  --font-weight-heading: 700;
+    --font-base: var(--font-public-sans);
+    --font-heading: var(--font-public-sans);
+    --font-weight-base: 400;
+    --font-weight-heading: 700;
 }
 
 @utility container-app {
-  width: 100%;
-  margin-inline: auto;
-  max-width: var(--container-max);
+    width: 100%;
+    margin-inline: auto;
+    max-width: var(--container-max);
 
-  /* padding for phone */
-  padding-inline: 16px;
-  padding-block: 0;
+    /* padding for phone */
+    padding-inline: 16px;
+    padding-block: 0;
 }
 
 @media (width >= 744px) {
-  .container-app {
-    padding-inline: 16px;
-    padding-top: 32px;
-    padding-bottom: 0;
-  }
+    .container-app {
+        padding-inline: 16px;
+        padding-top: 32px;
+        padding-bottom: 0;
+    }
 }
 
 @media (width >= 1120px) {
-  .container-app {
-    padding-inline: 0;
-    padding-top: 36px;
-    padding-bottom: 0;
-  }
+    .container-app {
+        padding-inline: 0;
+        padding-top: 36px;
+        padding-bottom: 0;
+    }
 }
-  
+
 @layer base {
-  body {
-    @apply text-foreground font-base bg-background;
-    background-image:
-      repeating-linear-gradient(0deg,   var(--background-grid-line) 0 1px, transparent 1px var(--background-grid-size)),
-      repeating-linear-gradient(90deg,  var(--background-grid-line) 0 1px, transparent 1px var(--background-grid-size));
-    background-size: var(--background-grid-size) var(--background-grid-size), var(--background-grid-size) var(--background-grid-size);
-    background-position: 0 0, 0 0;
-  }
+    body {
+        @apply text-foreground font-base bg-background;
+        background-image:
+            repeating-linear-gradient(
+                0deg,
+                var(--background-grid-line) 0 1px,
+                transparent 1px var(--background-grid-size)
+            ),
+            repeating-linear-gradient(
+                90deg,
+                var(--background-grid-line) 0 1px,
+                transparent 1px var(--background-grid-size)
+            );
+        background-size:
+            var(--background-grid-size) var(--background-grid-size),
+            var(--background-grid-size) var(--background-grid-size);
+        background-position:
+            0 0,
+            0 0;
+    }
 
-  h1, h2, h3, h4, h5, h6{
-    @apply font-heading;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading;
 
-    font-weight: 700;
-  }
+        font-weight: 700;
+    }
 
-  h1 { font-size: 32px; line-height: 1.15; letter-spacing: -0.01em; }
-  h2 { font-size: 24px; line-height: 1.2;  letter-spacing: -0.005em; }
-  h3 { font-size: 20px; line-height: 1.25; letter-spacing: 0; }
-  h4 { font-size: 18px; line-height: 1.3;  letter-spacing: 0; }
+    h1 {
+        font-size: 32px;
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: -0.005em;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 1.25;
+        letter-spacing: 0;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 1.3;
+        letter-spacing: 0;
+    }
 
-  /* Tablet ≥ 744px */
-  @media (width >= 744px) {
-    h1 { font-size: 40px; }
-    h2 { font-size: 28px; }
-    h3 { font-size: 22px; }
-    h4 { font-size: 18px; }
-  }
+    /* Tablet ≥ 744px */
+    @media (width >= 744px) {
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        h4 {
+            font-size: 18px;
+        }
+    }
 
-  /* Desktop content width ≥ 1120px */
-  @media (width >= 1120px) {
-    h1 { font-size: 48px; }
-    h2 { font-size: 32px; }
-    h3 { font-size: 24px; }
-    h4 { font-size: 20px; }
-  }
+    /* Desktop content width ≥ 1120px */
+    @media (width >= 1120px) {
+        h1 {
+            font-size: 48px;
+        }
+        h2 {
+            font-size: 32px;
+        }
+        h3 {
+            font-size: 24px;
+        }
+        h4 {
+            font-size: 20px;
+        }
+    }
 }
 
 @layer components {
-  .prose {
-    color: var(--color-foreground);
-    line-height: 1.6;
-    
-    /* Headings - GitHub style */
-    h1, h2 { 
-      margin-top: 24px; 
-      margin-bottom: 16px; 
-      font-weight: 600;
-      padding-bottom: 0.3em;
-      border-bottom: 1px solid var(--color-border);
+    .prose {
+        color: var(--color-foreground);
+        line-height: 1.6;
+
+        /* Headings - GitHub style */
+        h1,
+        h2 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid var(--color-border);
+        }
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        h1:first-child,
+        h2:first-child,
+        h3:first-child {
+            margin-top: 0;
+        }
+
+        /* Paragraphs */
+        p {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        /* Lists - GitHub style */
+        ul,
+        ol {
+            margin-top: 0;
+            margin-bottom: 16px;
+            padding-left: 2em;
+        }
+        ul {
+            list-style-type: disc;
+        }
+        ol {
+            list-style-type: decimal;
+        }
+        li {
+            margin-top: 0.25em;
+        }
+        li > p {
+            margin-bottom: 0;
+        }
+
+        /* Links - GitHub blue */
+        a {
+            color: #0969da;
+            text-decoration: none;
+            transition: text-decoration 160ms ease;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Inline code - GitHub style */
+        code {
+            background-color: rgba(175, 184, 193, 0.2);
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            border-radius: 6px;
+            font-family:
+                ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+                monospace;
+        }
+
+        /* Code blocks - GitHub style */
+        pre {
+            background-color: #f6f8fa;
+            padding: 16px;
+            margin-bottom: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            border-radius: 6px;
+            border: 1px solid #d0d7de;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+            font-size: 100%;
+        }
+
+        /* Blockquotes - GitHub style */
+        blockquote {
+            margin: 0 0 16px 0;
+            padding: 0 1em;
+            color: #656d76;
+            border-left: 0.25em solid #d0d7de;
+        }
+
+        /* Horizontal rules */
+        hr {
+            height: 0.25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: #d0d7de;
+            border: 0;
+        }
+
+        /* Tables - GitHub style */
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+            width: 100%;
+        }
+        th,
+        td {
+            padding: 6px 13px;
+            border: 1px solid #d0d7de;
+        }
+        th {
+            font-weight: 600;
+            background-color: #f6f8fa;
+        }
+        tr:nth-child(2n) {
+            background-color: #f6f8fa;
+        }
+
+        /* Strong and emphasis */
+        strong {
+            font-weight: 600;
+        }
+        em {
+            font-style: italic;
+        }
+
+        /* Images */
+        img {
+            max-width: 100%;
+            box-sizing: content-box;
+            background-color: var(--color-background);
+        }
     }
-    h3, h4, h5, h6 { 
-      margin-top: 24px; 
-      margin-bottom: 16px; 
-      font-weight: 600;
-    }
-    h1:first-child,
-    h2:first-child,
-    h3:first-child { margin-top: 0; }
-    
-    /* Paragraphs */
-    p { 
-      margin-top: 0;
-      margin-bottom: 16px; 
-    }
-    
-    /* Lists - GitHub style */
-    ul, ol { 
-      margin-top: 0;
-      margin-bottom: 16px; 
-      padding-left: 2em; 
-    }
-    ul { list-style-type: disc; }
-    ol { list-style-type: decimal; }
-    li { margin-top: 0.25em; }
-    li > p { margin-bottom: 0; }
-    
-    /* Links - GitHub blue */
-    a {
-      color: #0969da;
-      text-decoration: none;
-      transition: text-decoration 160ms ease;
-    }
-    a:hover { 
-      text-decoration: underline;
-    }
-    
-    /* Inline code - GitHub style */
-    code {
-      background-color: rgba(175, 184, 193, 0.2);
-      padding: 0.2em 0.4em;
-      margin: 0;
-      font-size: 85%;
-      border-radius: 6px;
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-    }
-    
-    /* Code blocks - GitHub style */
-    pre {
-      background-color: #f6f8fa;
-      padding: 16px;
-      margin-bottom: 16px;
-      overflow: auto;
-      font-size: 85%;
-      line-height: 1.45;
-      border-radius: 6px;
-      border: 1px solid #d0d7de;
-    }
-    pre code {
-      background: transparent;
-      padding: 0;
-      margin: 0;
-      border-radius: 0;
-      font-size: 100%;
-    }
-    
-    /* Blockquotes - GitHub style */
-    blockquote {
-      margin: 0 0 16px 0;
-      padding: 0 1em;
-      color: #656d76;
-      border-left: 0.25em solid #d0d7de;
-    }
-    
-    /* Horizontal rules */
-    hr {
-      height: 0.25em;
-      padding: 0;
-      margin: 24px 0;
-      background-color: #d0d7de;
-      border: 0;
-    }
-    
-    /* Tables - GitHub style */
-    table {
-      border-spacing: 0;
-      border-collapse: collapse;
-      margin-bottom: 16px;
-      width: 100%;
-    }
-    th, td {
-      padding: 6px 13px;
-      border: 1px solid #d0d7de;
-    }
-    th {
-      font-weight: 600;
-      background-color: #f6f8fa;
-    }
-    tr:nth-child(2n) {
-      background-color: #f6f8fa;
-    }
-    
-    /* Strong and emphasis */
-    strong { font-weight: 600; }
-    em { font-style: italic; }
-    
-    /* Images */
-    img {
-      max-width: 100%;
-      box-sizing: content-box;
-      background-color: var(--color-background);
-    }
-  }
 }
 
 @keyframes fade-in {
-  from { opacity: 0 }
-  to { opacity: 1 }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 @keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(8px) }
-  to { opacity: 1; transform: translateY(0) }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Small utilities */
 @utility animate-fade-in {
-  animation: fade-in 600ms ease-out both;
+    animation: fade-in 600ms ease-out both;
 }
 @utility animate-fade-in-up {
-  animation: fade-in-up 700ms ease-out both;
+    animation: fade-in-up 700ms ease-out both;
 }
 
 .link-lift {
-  display: inline-block;
-  transform-origin: 50% 50%;
-  transition: transform 160ms ease;
+    display: inline-block;
+    transform-origin: 50% 50%;
+    transition: transform 160ms ease;
 }
 .link-lift:hover,
 .link-lift:focus-visible {
-  transform: translate(-2px, -2px) rotate(-3deg);
+    transform: translate(-2px, -2px) rotate(-3deg);
 }
 .link-lift:active {
-  transform: translate(0, 0) rotate(0deg);
+    transform: translate(0, 0) rotate(0deg);
 }

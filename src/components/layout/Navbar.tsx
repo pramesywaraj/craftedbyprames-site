@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
-import { Button } from '@/components/ui/Button';
+import { Button } from "@/components/ui/Button";
 
 export default function Navbar() {
     return (
@@ -11,14 +11,34 @@ export default function Navbar() {
             </Link>
             <nav aria-label="Primary">
                 <ul className="flex items-center gap-6">
-                    <li><Link href="#home" className="link-lift font-semibold">Home</Link></li>
-                    <li><Link href="#journey" className="link-lift font-semibold">Journey</Link></li>
-                    <li><Link href="#projects" className="link-lift font-semibold">Projects</Link></li>
-                    <li><Link href="#tools" className="link-lift font-semibold">Tools</Link></li>
-                    <li><Link href="#contacts" className="link-lift font-semibold">Let&apos;s Connect!</Link></li>
+                    <li>
+                        <Link href="#home" className="link-lift font-semibold">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="#journey" className="link-lift font-semibold">
+                            Journey
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="#projects" className="link-lift font-semibold">
+                            Projects
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="#tools" className="link-lift font-semibold">
+                            Tools
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="#contacts" className="link-lift font-semibold">
+                            Let&apos;s Connect!
+                        </Link>
+                    </li>
                     <Button className="bg-brand-3">My Resume</Button>
                 </ul>
             </nav>
         </header>
-    )
+    );
 }

@@ -6,11 +6,7 @@ interface SectionProp extends React.ComponentProps<"div"> {
 }
 
 export function SectionContainer({ children }: React.ComponentProps<"div">) {
-    return (
-        <div className="w-full flex flex-col gap-6">
-            {children}
-        </div>
-    );
+    return <div className="w-full flex flex-col gap-6">{children}</div>;
 }
 
 export function SectionTitle({ children }: React.ComponentProps<"div">) {
@@ -23,7 +19,7 @@ export function SectionTitle({ children }: React.ComponentProps<"div">) {
 
 export function Section({ children, className, ariaLabelledBy, id }: SectionProp) {
     return (
-        <section id={id} aria-labelledby={ariaLabelledBy} className={cn('flex-1 py-8', className)}>
+        <section id={id} aria-labelledby={ariaLabelledBy} className={cn("flex-1 py-8", className)}>
             {children}
         </section>
     );

@@ -18,9 +18,9 @@ This site reflects how I approach building digital experiences: thoughtful desig
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js  
-- **Styling:** Tailwind CSS  
-- **Font:** Public Sans  
+- **Framework:** Next.js
+- **Styling:** Tailwind CSS
+- **Font:** Public Sans
 
 ---
 
@@ -36,9 +36,9 @@ See the [LICENSE](./LICENSE) file for details.
 
 If you’d like to connect or collaborate:
 
-- 🌐 [craftedbyprames.com](https://craftedbyprames.com)  
-- 💼 [LinkedIn](https://www.linkedin.com/in/pramesywara-j/)  
-- 🐙 [GitHub](https://github.com/pramesywaraj)  
+- 🌐 [craftedbyprames.com](https://craftedbyprames.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/pramesywara-j/)
+- 🐙 [GitHub](https://github.com/pramesywaraj)
 - ✉️ [Email](mailto:jembarpanalar21@gmail.com)
 
 ---
