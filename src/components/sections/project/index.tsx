@@ -12,7 +12,7 @@ import ProjectCard from "./ProjectCard";
 
 function ProjectSection() {
     return (
-        <Section id="project" ariaLabelledBy="project-title">
+        <Section id="projects" ariaLabelledBy="project-title">
             <SectionContainer>
                 <SectionTitle>Things I&apos;ve Built 📦</SectionTitle>
                 <Carousel
