@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
 import { LinkButton } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { ScrollArea } from "@/components/ui/ScrollArea";
 
 interface ProjectCardProps {
     title: string;
@@ -22,7 +23,7 @@ function ProjectCard({
     liveUrl,
 }: ProjectCardProps) {
     return (
-        <Card className="p-0 overflow-hidden max-w-sm">
+        <Card className="p-0 max-w-sm h-full">
             {/* Image placeholder */}
             <div className="w-full aspect-video bg-secondary-background border-b-2 border-border">
                 {image ? (
@@ -35,13 +36,15 @@ function ProjectCard({
             </div>
 
             {/* Title, Description, Tech Stack, and CTA Container */}
-            <div className="px-4 pb-4 flex flex-col gap-4">
+            <div className="px-4 pb-4 flex flex-col gap-4 h-full">
                 {/* Title and Description */}
                 <div className="flex flex-col gap-2">
                     <h3 className="text-xl font-heading font-bold">{title}</h3>
-                    <p className="text-sm text-foreground leading-relaxed line-clamp-4">
-                        {description}
-                    </p>
+                    <ScrollArea className="max-h-24">
+                        <p className="text-sm text-foreground leading-relaxed pr-4">
+                            {description}
+                        </p>
+                    </ScrollArea>
                 </div>
 
                 {/* Tech Stack */}
@@ -60,7 +63,7 @@ function ProjectCard({
                 {/* Action Icons */}
 
                 {(githubUrl || liveUrl) && (
-                    <div className="flex mt-2 gap-3 justify-end">
+                    <div className="flex mt-2 gap-3 flex-auto justify-end items-end">
                         {githubUrl && (
                             <LinkButton
                                 size="icon"
