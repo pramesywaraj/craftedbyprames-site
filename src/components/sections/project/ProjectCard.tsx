@@ -41,9 +41,7 @@ function ProjectCard({
                 <div className="flex flex-col gap-2">
                     <h3 className="text-xl font-heading font-bold">{title}</h3>
                     <ScrollArea className="max-h-24">
-                        <p className="text-sm text-foreground leading-relaxed pr-4">
-                            {description}
-                        </p>
+                        <p className="text-foreground leading-relaxed pr-4">{description}</p>
                     </ScrollArea>
                 </div>
 
@@ -53,7 +51,7 @@ function ProjectCard({
                         const colors = ["brand1", "brand2", "brand3"] as const;
                         const colorIndex = index % colors.length;
                         return (
-                            <Badge key={tech} color={colors[colorIndex]}>
+                            <Badge key={tech} color={colors[colorIndex]} className="font-bold">
                                 {tech}
                             </Badge>
                         );

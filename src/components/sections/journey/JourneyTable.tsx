@@ -57,6 +57,7 @@ function JourneyTable() {
                                 <Badge
                                     key={`tech-${index + 1}`}
                                     color={isEven ? "brand2" : "brand3"}
+                                    className="font-bold"
                                 >
                                     {item}
                                 </Badge>
