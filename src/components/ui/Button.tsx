@@ -9,12 +9,12 @@ const buttonVariants = cva(
         variants: {
             variant: {
                 default:
-                    "text-main-foreground bg-main border-2 border-border shadow-shadow-button hover:translate-x-button-boxShadowX hover:translate-y-button-boxShadowY hover:shadow-none",
+                    "text-main-foreground bg-main border-2 border-border shadow-shadow-button hover:translate-x-button-boxShadowX hover:translate-y-button-boxShadowY hover:shadow-none active:translate-x-button-boxShadowX active:translate-y-button-boxShadowY active:shadow-none",
                 noShadow: "text-main-foreground bg-main border-2 border-border",
                 neutral:
-                    "bg-secondary-background text-foreground border-2 border-border shadow-shadow-button hover:translate-x-button-boxShadowX hover:translate-y-button-boxShadowY hover:shadow-none",
+                    "bg-secondary-background text-foreground border-2 border-border shadow-shadow-button hover:translate-x-button-boxShadowX hover:translate-y-button-boxShadowY hover:shadow-none active:translate-x-button-boxShadowX active:translate-y-button-boxShadowY active:shadow-none",
                 reverse:
-                    "text-main-foreground bg-main border-2 border-border hover:translate-x-button-reverseBoxShadowX hover:translate-y-button-reverseBoxShadowY hover:shadow-shadow-button",
+                    "text-main-foreground bg-main border-2 border-border hover:translate-x-button-reverseBoxShadowX hover:translate-y-button-reverseBoxShadowY hover:shadow-shadow-button active:translate-x-button-reverseBoxShadowX active:translate-y-button-reverseBoxShadowY active:shadow-shadow-button",
             },
             size: {
                 default: "px-4 py-3",
