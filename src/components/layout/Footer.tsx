@@ -6,7 +6,10 @@ import FOOTER_CTA_LINKS from "@/data/footer-cta";
 
 export default function Footer() {
     return (
-        <footer id="contacts" className="bg-main p-4 border-4 border-border flex flex-col gap-10">
+        <footer
+            id="contacts"
+            className="footer-container bg-main p-4 border-4 border-border flex flex-col gap-10"
+        >
             <div className="flex flex-col md:flex-row gap-8 md:gap-16">
                 <div className="flex-1 gap-8">
                     <div className="flex flex-col gap-4">

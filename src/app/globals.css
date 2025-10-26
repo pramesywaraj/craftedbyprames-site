@@ -83,6 +83,12 @@
     padding-inline: 8px;
 }
 
+@utility footer-container {
+    width: 100%;
+    margin-inline: auto;
+    max-width: var(--container-mobile);
+}
+
 @media (width >= 744px) {
     .container-app {
         padding-inline: 16px;
@@ -91,6 +97,10 @@
     }
 
     .navbar-container {
+        max-width: var(--container-tablet);
+    }
+
+    .footer-container {
         max-width: var(--container-tablet);
     }
 }
@@ -103,6 +113,10 @@
     }
 
     .navbar-container {
+        max-width: var(--container-max);
+    }
+
+    .footer-container {
         max-width: var(--container-max);
     }
 }

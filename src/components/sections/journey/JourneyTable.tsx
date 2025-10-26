@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -14,14 +14,29 @@ import JourneyEntry from "./JourneyEntry";
 
 function JourneyTable() {
     const [selectedJourney, setSelectedJourney] = useState<IJourney>(JOURNEY_ITEMS[0]);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsMobile(window.innerWidth < 744);
+        };
+
+        checkScreenSize();
+        window.addEventListener("resize", checkScreenSize);
+
+        return () => window.removeEventListener("resize", checkScreenSize);
+    }, []);
 
     const onSelectJourney = (journey: IJourney) => {
         setSelectedJourney(journey);
     };
 
     return (
-        <Card className="p-0 min-h-[70vh]">
-            <ResizablePanelGroup direction="horizontal" className="max-h-[70vh]">
+        <Card className="p-0 min-h-[80vh]">
+            <ResizablePanelGroup
+                direction={isMobile ? "vertical" : "horizontal"}
+                className="flex-1 max-h-[90vh] md:max-h-[80vh]"
+            >
                 <ResizablePanel className="flex flex-col" minSize={30} defaultSize={40}>
                     <div className="p-4 border-border border-b-2">
                         <p className="font-semibold">Timeline</p>
@@ -44,13 +59,13 @@ function JourneyTable() {
                     </ScrollArea>
                 </ResizablePanel>
                 <ResizableHandle />
-                <ResizablePanel className="flex flex-col">
+                <ResizablePanel className="flex flex-col" defaultSize={60}>
                     <ScrollArea className="flex-1 p-4 prose max-w-none">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
                             {selectedJourney.content}
                         </ReactMarkdown>
                     </ScrollArea>
-                    <div className="flex gap-2.5 p-4 border-border border-t-2 flex-wrap">
+                    <div className="flex gap-2.5 p-4 border-border border-t-2 scroll-auto overflow-scroll md:flex-wrap">
                         {selectedJourney.tech_stack.map((item, index) => {
                             const isEven = index % 2 === 0;
                             return (

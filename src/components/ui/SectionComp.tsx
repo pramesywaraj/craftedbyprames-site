@@ -11,7 +11,7 @@ export function SectionContainer({ children }: React.ComponentProps<"div">) {
 
 export function SectionTitle({ children }: React.ComponentProps<"div">) {
     return (
-        <div className="w-1/2 py-6 bg-main border-[3px] border-border shadow-shadow text-center">
+        <div className="w-full md:w-1/2 py-6 bg-main border-[3px] border-border shadow-shadow text-center">
             <h2>{children}</h2>
         </div>
     );
