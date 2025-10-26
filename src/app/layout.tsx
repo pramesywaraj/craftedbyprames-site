@@ -19,9 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${publicSans.variable} antialiased mx-auto w-full container-app h-fit`}
-            >
+            <body className={`${publicSans.variable} antialiased mx-auto w-full h-fit`}>
                 {children}
             </body>
         </html>

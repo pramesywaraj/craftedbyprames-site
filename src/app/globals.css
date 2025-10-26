@@ -12,6 +12,7 @@
     --overlay: oklch(0% 0 0 / 0.8);
     --shadow: 12px 12px 0px 0px var(--border);
     --shadow-button: 4px 4px 0px 0px var(--border);
+    --shadow-mobile: 8px 8px 0px 0px var(--border);
 
     --brand-1: oklch(0.5973 0.2237 279.77);
     --brand-2: oklch(0.7095 0.1881 11.01);
@@ -26,6 +27,8 @@
     --breakpoint-xl: 1440px;
 
     --container-max: 1120px;
+    --container-mobile: calc(100vw - 8px);
+    --container-tablet: calc(100vw - 16px);
 }
 
 @theme inline {
@@ -53,6 +56,7 @@
 
     --radius-base: 10px;
     --shadow-shadow: var(--shadow);
+    --shadow-mobile: var(--shadow-mobile);
     --shadow-shadow-button: var(--shadow-button);
 
     --font-base: var(--font-public-sans);
@@ -71,11 +75,23 @@
     padding-block: 0;
 }
 
+@utility navbar-container {
+    width: 100%;
+    margin-inline: auto;
+    max-width: var(--container-mobile);
+
+    padding-inline: 8px;
+}
+
 @media (width >= 744px) {
     .container-app {
         padding-inline: 16px;
         padding-top: 32px;
         padding-bottom: 0;
+    }
+
+    .navbar-container {
+        max-width: var(--container-tablet);
     }
 }
 
@@ -84,6 +100,10 @@
         padding-inline: 0;
         padding-top: 36px;
         padding-bottom: 0;
+    }
+
+    .navbar-container {
+        max-width: var(--container-max);
     }
 }
 

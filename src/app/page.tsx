@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <main className="flex flex-col gap-8">
+            <main className="flex flex-col gap-8 container-app">
                 <HeroSection />
                 <ToolsSection />
                 <JourneySection />
