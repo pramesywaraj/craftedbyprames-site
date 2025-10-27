@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import { Button, LinkButton } from "@/components/ui/Button";
 import FOOTER_CTA_LINKS from "@/data/footer-cta";
+import { scrollToSection } from "@/lib/utils";
 
 export default function Footer() {
     return (
@@ -45,7 +48,11 @@ export default function Footer() {
                         <nav aria-label="Footer navigation">
                             <ul className="flex flex-wrap gap-4 mb-6">
                                 <li>
-                                    <Link href="#home" className="text-foreground link-lift">
+                                    <Link
+                                        href="#home"
+                                        className="text-foreground link-lift"
+                                        onClick={(e) => scrollToSection(e, "#home")}
+                                    >
                                         Home
                                     </Link>
                                 </li>
@@ -53,7 +60,11 @@ export default function Footer() {
                                     <span className="text-foreground">•</span>
                                 </li>
                                 <li>
-                                    <Link href="#journey" className="text-foreground link-lift">
+                                    <Link
+                                        href="#journey"
+                                        className="text-foreground link-lift"
+                                        onClick={(e) => scrollToSection(e, "#journey")}
+                                    >
                                         Journey
                                     </Link>
                                 </li>
@@ -61,7 +72,11 @@ export default function Footer() {
                                     <span className="text-foreground">•</span>
                                 </li>
                                 <li>
-                                    <Link href="#projects" className="text-foreground link-lift">
+                                    <Link
+                                        href="#projects"
+                                        className="text-foreground link-lift"
+                                        onClick={(e) => scrollToSection(e, "#projects")}
+                                    >
                                         Projects
                                     </Link>
                                 </li>
@@ -69,7 +84,11 @@ export default function Footer() {
                                     <span className="text-foreground">•</span>
                                 </li>
                                 <li>
-                                    <Link href="#tools" className="text-foreground link-lift">
+                                    <Link
+                                        href="#tools"
+                                        className="text-foreground link-lift"
+                                        onClick={(e) => scrollToSection(e, "#tools")}
+                                    >
                                         Tools
                                     </Link>
                                 </li>

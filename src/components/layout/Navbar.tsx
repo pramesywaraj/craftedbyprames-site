@@ -12,7 +12,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
-import { cn } from "@/lib/utils";
+import { cn, scrollToSection } from "@/lib/utils";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -44,32 +44,18 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY]);
 
-    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-        e.preventDefault();
-        const element = document.querySelector(id);
-        if (element) {
-            const navbar = document.querySelector("header");
-            const navbarHeight = navbar ? navbar.offsetHeight + 16 : 100;
+    const onScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+        scrollToSection(e, id);
 
-            const elementPosition = element.getBoundingClientRect().top;
-
-            const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
-            if (isMobileMenuOpen) {
-                setIsMobileMenuOpen(false);
-            }
-
-            window.scrollTo({
-                top: id === "#home" ? 0 : offsetPosition,
-                behavior: "smooth",
-            });
+        if (isMobileMenuOpen) {
+            setIsMobileMenuOpen(false);
         }
     };
 
     return (
         <header
             className={cn(
-                "navbar-container z-50 p-4 md:px-12 md:py-3 lg:px-16 lg:py-3.5 bg-main border-2 border-border flex items-center justify-between transition-all duration-300 shadow-mobile md:shadow-shadow",
+                "navbar-container z-50 p-3 md:px-12 md:py-3 lg:px-16 lg:py-3.5 bg-main border-2 border-border flex items-center justify-between transition-all duration-300 shadow-mobile md:shadow-shadow",
                 isScrolled
                     ? "sticky translate-y-0 top-0 backdrop-blur-sm w-full md:px-8 md:py-2"
                     : "",
@@ -91,7 +77,7 @@ export default function Navbar() {
                     <li>
                         <Link
                             href="#home"
-                            onClick={(e) => scrollToSection(e, "#home")}
+                            onClick={(e) => onScrollToSection(e, "#home")}
                             className="link-lift font-semibold"
                         >
                             Home
@@ -100,7 +86,7 @@ export default function Navbar() {
                     <li>
                         <Link
                             href="#journey"
-                            onClick={(e) => scrollToSection(e, "#journey")}
+                            onClick={(e) => onScrollToSection(e, "#journey")}
                             className="link-lift font-semibold"
                         >
                             Journey
@@ -109,7 +95,7 @@ export default function Navbar() {
                     <li>
                         <Link
                             href="#projects"
-                            onClick={(e) => scrollToSection(e, "#projects")}
+                            onClick={(e) => onScrollToSection(e, "#projects")}
                             className="link-lift font-semibold"
                         >
                             Projects
@@ -118,7 +104,7 @@ export default function Navbar() {
                     <li>
                         <Link
                             href="#tools"
-                            onClick={(e) => scrollToSection(e, "#tools")}
+                            onClick={(e) => onScrollToSection(e, "#tools")}
                             className="link-lift font-semibold"
                         >
                             Tools
@@ -127,7 +113,7 @@ export default function Navbar() {
                     <li>
                         <Link
                             href="#contacts"
-                            onClick={(e) => scrollToSection(e, "#contacts")}
+                            onClick={(e) => onScrollToSection(e, "#contacts")}
                             className="link-lift font-semibold"
                         >
                             Let&apos;s Connect!
@@ -147,7 +133,7 @@ export default function Navbar() {
                     <DropdownMenuItem>
                         <Link
                             href="#home"
-                            onClick={(e) => scrollToSection(e, "#home")}
+                            onClick={(e) => onScrollToSection(e, "#home")}
                             className="link-lift font-semibold"
                         >
                             Home
@@ -156,7 +142,7 @@ export default function Navbar() {
                     <DropdownMenuItem>
                         <Link
                             href="#journey"
-                            onClick={(e) => scrollToSection(e, "#journey")}
+                            onClick={(e) => onScrollToSection(e, "#journey")}
                             className="link-lift font-semibold"
                         >
                             Journey
@@ -165,7 +151,7 @@ export default function Navbar() {
                     <DropdownMenuItem>
                         <Link
                             href="#projects"
-                            onClick={(e) => scrollToSection(e, "#projects")}
+                            onClick={(e) => onScrollToSection(e, "#projects")}
                             className="link-lift font-semibold"
                         >
                             Projects
@@ -174,7 +160,7 @@ export default function Navbar() {
                     <DropdownMenuItem>
                         <Link
                             href="#tools"
-                            onClick={(e) => scrollToSection(e, "#tools")}
+                            onClick={(e) => onScrollToSection(e, "#tools")}
                             className="link-lift font-semibold"
                         >
                             Tools
@@ -183,7 +169,7 @@ export default function Navbar() {
                     <DropdownMenuItem>
                         <Link
                             href="#contacts"
-                            onClick={(e) => scrollToSection(e, "#contacts")}
+                            onClick={(e) => onScrollToSection(e, "#contacts")}
                             className="link-lift font-semibold"
                         >
                             Let&apos;s Connect!

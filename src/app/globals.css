@@ -384,6 +384,23 @@
     animation: fade-in-up 700ms ease-out both;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    section {
+        scale: 0.8;
+        opacity: 0;
+        animation: section-appear linear forwards;
+        animation-timeline: view();
+        animation-range: 250px 500px;
+    }
+
+    @keyframes section-appear {
+        to {
+            scale: 1;
+            opacity: 1;
+        }
+    }
+}
+
 .link-lift {
     display: inline-block;
     transform-origin: 50% 50%;
