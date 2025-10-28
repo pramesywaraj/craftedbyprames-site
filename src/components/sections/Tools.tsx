@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Card, CardContent } from "@/components/ui/Card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Section, SectionContainer, SectionTitle } from "@/components/ui/SectionComp";
 import { tools } from "@/data/tools";
 
