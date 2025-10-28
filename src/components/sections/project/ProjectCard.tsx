@@ -1,8 +1,8 @@
 import Image from "next/image";
 
+import { Card } from "@/Card";
 import { Badge } from "@/components/ui/Badge";
 import { LinkButton } from "@/components/ui/Button";
-import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/ScrollArea";
 
 interface ProjectCardProps {

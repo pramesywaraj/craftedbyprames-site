@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 import { Badge } from "@/components/ui/Badge";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/Card";
 import { ResizablePanel, ResizableHandle, ResizablePanelGroup } from "@/components/ui/Resizeable";
 import { ScrollArea } from "@/components/ui/ScrollArea";
 import { IJourney, JOURNEY_ITEMS } from "@/data/journey";
