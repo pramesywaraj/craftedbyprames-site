@@ -36,14 +36,16 @@ export default function HeroSection() {
                         people in meaningful ways.
                     </p>
                     <div className="flex gap-2 md:gap-4 mt-3 animate-fade-in-up [animation-delay:1500ms] motion-reduce:animate-none">
-                        <Button className="bg-brand-2" onClick={() => scrollToFooter()}>
-                            Let&apos;s Connect with Me!
+                        <Button
+                            className="bg-brand-2 font-bold text-xl"
+                            onClick={() => scrollToFooter()}
+                        >
+                            Let&apos;s Connect!
                         </Button>
-                        <Button className="bg-brand-3">My Resume</Button>
                     </div>
                 </div>
                 <Image
-                    src="/hero-illustration.svg"
+                    src="/hero-illustration.webp"
                     alt="craftedByPrames hero illustration"
                     priority
                     className="max-w-[70vw] md:h-auto md:w-full md:max-w-[404px] animate-fade-in-up [animation-delay:0ms] md:[animation-delay:400ms] motion-reduce:animate-none"

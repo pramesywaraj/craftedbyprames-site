@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button, LinkButton } from "@/components/ui/Button";
-import { APP_VERSION } from "@/config/app";
+import { LinkButton } from "@/components/ui/Button";
+import { APP_VERSION, RESUME_URL } from "@/config/app";
 import FOOTER_CTA_LINKS from "@/data/footer-cta";
 import { scrollToSection } from "@/lib/utils";
 
@@ -19,8 +19,8 @@ export default function Footer() {
                     <div className="flex flex-col gap-4">
                         <h2>Let&apos;s Connect! 🙌</h2>
                         <p className="text-foreground mb-6">
-                            I&apos;m always open to chat about frontend, design systems, or cool
-                            side projects. You can always find me here:
+                            Always happy to connect and talk about software engineering, design, or
+                            side projects. You can reach me here:
                         </p>
                     </div>
                     <div className="flex gap-4">
@@ -97,7 +97,9 @@ export default function Footer() {
                         </nav>
                     </div>
 
-                    <Button className="bg-brand-3 w-fit">My Resume</Button>
+                    <LinkButton className="bg-brand-3 w-fit" href={RESUME_URL} target="_blank">
+                        My Resume
+                    </LinkButton>
                 </div>
             </div>
             <div className="pt-6 border-t-2 border-dashed border-border">

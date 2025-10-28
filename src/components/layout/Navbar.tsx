@@ -5,13 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { Button } from "@/components/ui/Button";
+import { LinkButton, Button } from "@/components/ui/Button";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
+import { RESUME_URL } from "@/config/app";
 import { cn, scrollToSection } from "@/lib/utils";
 
 export default function Navbar() {
@@ -122,7 +123,13 @@ export default function Navbar() {
                             Let&apos;s Connect!
                         </Link>
                     </li>
-                    <Button className="bg-brand-3">My Resume</Button>
+                    <LinkButton
+                        className="bg-brand-3 rotate-[-3deg]"
+                        href={RESUME_URL}
+                        target="_blank"
+                    >
+                        My Resume
+                    </LinkButton>
                 </ul>
             </nav>
 
@@ -179,7 +186,13 @@ export default function Navbar() {
                         </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
-                        <Button className="bg-brand-3">My Resume</Button>
+                        <LinkButton
+                            className="bg-brand-3 rotate-[-3deg]"
+                            href={RESUME_URL}
+                            target="_blank"
+                        >
+                            My Resume
+                        </LinkButton>
                     </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>
