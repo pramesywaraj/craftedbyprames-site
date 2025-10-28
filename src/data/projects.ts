@@ -14,7 +14,7 @@ export const PROJECT_ITEMS: IProject[] = [
             "A progressive web app (PWA) for real-time professional networking and mentoring. Features instant messaging using WebSockets, enabling professionals to connect, discuss, and collaborate seamlessly in their respective fields.",
         tech_stack: ["TypeScript", "Vue.js", "NestJS", "PostgreSQL", "TypeORM", "Socket.io"],
         github_url: "https://github.com/pramesywaraj/chonnect-frontend-vue",
-        image_url: "",
+        image_url: "/projects/chonnect.png",
     },
     {
         title: "Tanya Notaris",
@@ -23,7 +23,7 @@ export const PROJECT_ITEMS: IProject[] = [
         tech_stack: ["React", "Next.js", "Tailwind CSS", "SWR", "Laravel"],
         github_url: "https://github.com/pramesywaraj/tanya-notaris-app",
         live_url: "https://tanyanotaris-demo.vercel.app/",
-        image_url: "",
+        image_url: "/projects/tanya-notaris.svg",
     },
     {
         title: "Bieon App",
@@ -32,10 +32,10 @@ export const PROJECT_ITEMS: IProject[] = [
         tech_stack: ["React", "React Native"],
         github_url: "https://github.com/pramesywaraj/bieonapp",
         live_url: "https://play.google.com/store/apps/details?id=id.bieon.app",
-        image_url: "",
+        image_url: "/projects/bieon.svg",
     },
     {
-        title: "Cleansheet",
+        title: "CleaningServ",
         description:
             "An on-demand household cleaning service platform that simplifies booking professional cleaning services. Built with responsive design to provide optimal experience across all devices.",
         tech_stack: ["React", "React Hooks", "Sass", "Lumen"],

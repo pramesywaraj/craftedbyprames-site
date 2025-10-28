@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button, LinkButton } from "@/components/ui/Button";
+import { APP_VERSION } from "@/config/app";
 import FOOTER_CTA_LINKS from "@/data/footer-cta";
 import { scrollToSection } from "@/lib/utils";
 
@@ -102,7 +103,8 @@ export default function Footer() {
             <div className="pt-6 border-t-2 border-dashed border-border">
                 <p className="text-center text-foreground text-sm">
                     <span className="font-bold">© 2025 Pramesywara Jembar</span> | Built with
-                    Next.js, TailwindCSS, and a lot of coffee ☕
+                    Next.js, TailwindCSS, and a lot of coffee ☕ |{" "}
+                    <span className="font-semibold">{`v${APP_VERSION}`}</span>
                 </p>
             </div>
         </footer>

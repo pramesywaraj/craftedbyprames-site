@@ -68,7 +68,10 @@ export default function Navbar() {
                     alt="craftedByPrames logo"
                     width={85}
                     height={68}
-                    className={cn("w-12 md:w-20 h-auto", isScrolled ? "md:w-16" : "")}
+                    className={cn(
+                        "w-12 md:w-20 h-auto rotate-[-10deg]",
+                        isScrolled ? "md:w-16" : ""
+                    )}
                     priority
                 />
             </Link>

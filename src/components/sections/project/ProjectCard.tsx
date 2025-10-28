@@ -31,7 +31,9 @@ function ProjectCard({
                         <Image src={image} alt={title} fill className="object-cover" />
                     </div>
                 ) : (
-                    <div className="w-full h-full" />
+                    <div className="flex justify-center items-center w-full h-full bg-main">
+                        <h2>{title}</h2>
+                    </div>
                 )}
             </div>
 

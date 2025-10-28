@@ -29,6 +29,7 @@ function ProjectSection() {
                             >
                                 <ProjectCard
                                     title={item.title}
+                                    image={item.image_url}
                                     description={item.description}
                                     techStack={item.tech_stack}
                                     githubUrl={item.github_url}
