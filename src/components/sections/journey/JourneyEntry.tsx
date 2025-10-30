@@ -42,7 +42,7 @@ function JourneyEntry({
             {/* Job Title and Company */}
             <div className="flex justify-between">
                 <p className="text-xl min-w-[60%] font-bold text-foreground">{title}</p>
-                <span className="text-md font-bold text-foreground">{`@ ${company}`}</span>
+                <span className="text-md font-bold text-foreground">{company}</span>
             </div>
 
             {/* Duration and Employment Type */}

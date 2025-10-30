@@ -7,7 +7,7 @@ import remarkGfm from "remark-gfm";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { ResizablePanel, ResizableHandle, ResizablePanelGroup } from "@/components/ui/Resizeable";
-import { ScrollArea } from "@/components/ui/ScrollArea";
+import { ScrollArea, ScrollBar } from "@/components/ui/ScrollArea";
 import { IJourney, JOURNEY_ITEMS } from "@/data/journey";
 
 import JourneyEntry from "./JourneyEntry";
@@ -65,20 +65,23 @@ function JourneyTable() {
                             {selectedJourney.content}
                         </ReactMarkdown>
                     </ScrollArea>
-                    <div className="flex gap-2.5 p-4 border-border border-t-2 scroll-auto overflow-scroll md:flex-wrap">
-                        {selectedJourney.tech_stack.map((item, index) => {
-                            const isEven = index % 2 === 0;
-                            return (
-                                <Badge
-                                    key={`tech-${index + 1}`}
-                                    color={isEven ? "brand2" : "brand3"}
-                                    className="font-bold"
-                                >
-                                    {item}
-                                </Badge>
-                            );
-                        })}
-                    </div>
+                    <ScrollArea className="w-full border-border border-t-2 whitespace-nowrap">
+                        <div className="flex gap-2.5 p-4 w-max">
+                            {selectedJourney.tech_stack.map((item, index) => {
+                                const isEven = index % 2 === 0;
+                                return (
+                                    <Badge
+                                        key={`tech-${index + 1}`}
+                                        color={isEven ? "brand2" : "brand3"}
+                                        className="font-bold"
+                                    >
+                                        {item}
+                                    </Badge>
+                                );
+                            })}
+                        </div>
+                        <ScrollBar orientation="horizontal" />
+                    </ScrollArea>
                 </ResizablePanel>
             </ResizablePanelGroup>
         </Card>

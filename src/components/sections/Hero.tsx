@@ -35,7 +35,7 @@ export default function HeroSection() {
                         creativity — building products that not only work, but also connect with
                         people in meaningful ways.
                     </p>
-                    <div className="flex gap-2 md:gap-4 mt-3 animate-fade-in-up [animation-delay:1500ms] motion-reduce:animate-none">
+                    <div className="flex gap-2 justify-center md:justify-start md:gap-4 mt-3 animate-fade-in-up [animation-delay:1500ms] motion-reduce:animate-none">
                         <Button
                             className="bg-brand-2 font-bold text-xl"
                             onClick={() => scrollToFooter()}

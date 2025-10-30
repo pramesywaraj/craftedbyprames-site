@@ -20,7 +20,7 @@ export default function Footer() {
                         <h2>Let&apos;s Connect! 🙌</h2>
                         <p className="text-foreground mb-6">
                             Always happy to connect and talk about software engineering, design, or
-                            side projects. You can reach me here:
+                            cool side projects. You can reach me here:
                         </p>
                     </div>
                     <div className="flex gap-4">
