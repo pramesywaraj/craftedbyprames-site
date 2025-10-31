@@ -95,9 +95,9 @@ export const metadata: Metadata = {
         title: siteName,
     },
     metadataBase: new URL(baseUrl),
-    // verification: {
-    //     google: "your-google-site-verification-code", // Get from Google Search Console
-    // },
+    verification: {
+        google: "eKmtKPXx3IbCWNkIIM2F1keJNyWq3l5HIGXGx4GgFqc", // Get from Google Search Console
+    },
 };
 
 export default function RootLayout({
