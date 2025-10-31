@@ -1,16 +1,8 @@
-export function formatUTCDateRange(start: string, end: string) {
-    const startDate = new Date(start);
-    const endDate = new Date(end);
+import dayjs from "dayjs";
 
-    const startFormatted = startDate.toLocaleDateString("en-US", {
-        month: "short",
-        year: "numeric",
-        timeZone: "UTC",
-    });
-    const endFormatted = endDate.toLocaleDateString("en-US", {
-        month: "short",
-        year: "numeric",
-        timeZone: "UTC",
-    });
-    return `${startFormatted} — ${endFormatted}`;
+export function formatUTCDateRange(start: string, end: string) {
+    const startDate = dayjs(start).format("MMM YYYY");
+    const endDate = dayjs(end).format("MMM YYYY");
+
+    return `${startDate} — ${endDate}`;
 }

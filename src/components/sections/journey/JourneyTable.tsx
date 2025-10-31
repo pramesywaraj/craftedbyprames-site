@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -41,7 +42,7 @@ function JourneyTable() {
                     <div className="p-4 border-border border-b-2">
                         <p className="font-semibold">Timeline</p>
                     </div>
-                    <ScrollArea>
+                    <ScrollArea type="always">
                         {JOURNEY_ITEMS.map((journey) => (
                             <JourneyEntry
                                 key={journey.id}
@@ -56,32 +57,42 @@ function JourneyTable() {
                                 onClick={() => onSelectJourney(journey)}
                             />
                         ))}
+                        <ScrollBar
+                            orientation="vertical"
+                            className="bg-overlay! opacity-20 cursor-all-scroll"
+                        />
                     </ScrollArea>
                 </ResizablePanel>
-                <ResizableHandle />
+                <ResizableHandle withHandle hitAreaMargins={{ coarse: 5, fine: 5 }} />
                 <ResizablePanel className="flex flex-col" defaultSize={60}>
-                    <ScrollArea className="flex-1 p-4 prose max-w-none">
+                    <ScrollArea type="auto" className="flex-1 p-4 prose max-w-none">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
                             {selectedJourney.content}
                         </ReactMarkdown>
+                        <ScrollBar
+                            orientation="vertical"
+                            className="bg-overlay! opacity-20 cursor-all-scroll"
+                        />
                     </ScrollArea>
-                    <ScrollArea className="w-full border-border border-t-2 whitespace-nowrap">
-                        <div className="flex gap-2.5 p-4 w-max">
-                            {selectedJourney.tech_stack.map((item, index) => {
-                                const isEven = index % 2 === 0;
-                                return (
-                                    <Badge
-                                        key={`tech-${index + 1}`}
-                                        color={isEven ? "brand2" : "brand3"}
-                                        className="font-bold"
-                                    >
-                                        {item}
-                                    </Badge>
-                                );
-                            })}
-                        </div>
-                        <ScrollBar orientation="horizontal" />
-                    </ScrollArea>
+                    <Marquee
+                        gradient={false}
+                        speed={40}
+                        pauseOnHover
+                        className="p-4 border-t-2 border-border overflow-hidden"
+                    >
+                        {selectedJourney.tech_stack.map((item, index) => {
+                            const isEven = index % 2 === 0;
+                            return (
+                                <Badge
+                                    key={`tech-${index + 1}`}
+                                    color={isEven ? "brand2" : "brand3"}
+                                    className="font-bold ml-4"
+                                >
+                                    {item}
+                                </Badge>
+                            );
+                        })}
+                    </Marquee>
                 </ResizablePanel>
             </ResizablePanelGroup>
         </Card>

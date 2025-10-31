@@ -92,8 +92,6 @@
 @media (width >= 744px) {
     .container-app {
         padding-inline: 16px;
-        padding-top: 32px;
-        padding-bottom: 0;
     }
 
     .navbar-container {
@@ -108,8 +106,6 @@
 @media (width >= 1120px) {
     .container-app {
         padding-inline: 0;
-        padding-top: 36px;
-        padding-bottom: 0;
     }
 
     .navbar-container {
@@ -399,6 +395,12 @@
             opacity: 1;
         }
     }
+}
+
+[data-radix-scroll-area-viewport] {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
 }
 
 .link-lift {
