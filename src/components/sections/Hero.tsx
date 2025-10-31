@@ -18,9 +18,13 @@ export default function HeroSection() {
     };
 
     return (
-        <Section id="home" ariaLabelledBy="home-title" className="min-h-[90vh] flex flex-col">
+        <Section
+            id="home"
+            ariaLabelledBy="home-title"
+            className="min-h-[90vh] flex flex-col justify-center items-center"
+        >
             <div className="flex flex-col-reverse md:flex-row items-center gap-4 flex-1">
-                <div className="flex flex-col gap-3 md:gap-5 flex-1">
+                <div className="flex flex-col gap-3 md:gap-5 md:flex-1">
                     <p className="text-xl md:text-3xl animate-fade-in text-center md:text-left [animation-delay:400ms] md:[animation-delay:0ms] motion-reduce:animate-none">
                         Hello there! 👋 🙌 👋
                     </p>

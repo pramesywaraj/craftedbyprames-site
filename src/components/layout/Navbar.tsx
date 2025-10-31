@@ -139,7 +139,12 @@ export default function Navbar() {
                         {isMobileMenuOpen ? <XIcon size={16} /> : <LucideMenu size={16} />}
                     </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-fit">
+                <DropdownMenuContent
+                    className="w-full"
+                    collisionPadding={{ right: 16 }}
+                    sideOffset={8}
+                    avoidCollisions
+                >
                     <DropdownMenuItem>
                         <Link
                             href="#home"
