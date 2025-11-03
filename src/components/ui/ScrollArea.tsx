@@ -5,11 +5,37 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-function ScrollArea({
-    className,
-    children,
-    ...props
-}: React.ComponentProps<typeof ScrollAreaPrimitive.Root>) {
+type ScrollAreaProps = React.ComponentProps<typeof ScrollAreaPrimitive.Root> & {
+    nativeOnIOS?: boolean;
+};
+
+function isIOS() {
+    if (typeof navigator === "undefined") return false;
+    const userAgent = navigator.userAgent || "";
+
+    return (
+        /iP(hone|ad|od)/i.test(userAgent) ||
+        (/\bMacintosh\b/i.test(userAgent) && "ontouchend" in window)
+    );
+}
+
+function ScrollArea({ className, children, nativeOnIOS = true, ...props }: ScrollAreaProps) {
+    const isUseNative = nativeOnIOS && isIOS();
+
+    if (isUseNative) {
+        return (
+            <div
+                data-slot="scroll-area-native"
+                className={cn(
+                    "relative h-full w-full overflow-auto [-webkit-overflow-scrolling:touch] overscroll-contain",
+                    className
+                )}
+            >
+                {children}
+            </div>
+        );
+    }
+
     return (
         <ScrollAreaPrimitive.Root
             data-slot="scroll-area"
