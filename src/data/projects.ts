@@ -13,7 +13,7 @@ export const PROJECT_ITEMS: IProject[] = [
         description:
             "A real-time progressive web app (PWA) that empowers professionals to connect, chat, and collaborate seamlessly through instant messaging.",
         tech_stack: ["TypeScript", "Vue.js", "NestJS", "PostgreSQL", "TypeORM", "Socket.io"],
-        github_url: "https://github.com/pramesywaraj/chonnect-frontend-vue",
+        github_url: "https://github.com/pramesywaraj/chonnect-frontend",
         image_url: "/projects/chonnect.png",
     },
     {
